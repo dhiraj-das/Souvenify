@@ -1,0 +1,665 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B191ADACE39073D3C1FD6D6 /* Pods_Souvenify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479ADEF4AE410A3634DF66B5 /* Pods_Souvenify.framework */; };
+		8B05923D1D76AE6F006CD582 /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B05923C1D76AE6F006CD582 /* SideBarViewController.swift */; };
+		8B05923F1D76C0B0006CD582 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B05923E1D76C0B0006CD582 /* SideBar.swift */; };
+		8B4E41751D75623D005A802C /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E41741D75623D005A802C /* SearchResultViewController.swift */; };
+		8B83A6921D73499D0067B7E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B83A6911D73499D0067B7E2 /* GoogleService-Info.plist */; };
+		8BD2FCCA1D706891002A3CEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2FCC91D706891002A3CEC /* AppDelegate.swift */; };
+		8BD2FCCC1D706891002A3CEC /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2FCCB1D706891002A3CEC /* LoginScreenViewController.swift */; };
+		8BD2FCCF1D706891002A3CEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD2FCCD1D706891002A3CEC /* Main.storyboard */; };
+		8BD2FCD11D706891002A3CEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD2FCD01D706891002A3CEC /* Assets.xcassets */; };
+		8BD2FCD41D706891002A3CEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD2FCD21D706891002A3CEC /* LaunchScreen.storyboard */; };
+		8BD2FCDF1D706891002A3CEC /* SouvenifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2FCDE1D706891002A3CEC /* SouvenifyTests.swift */; };
+		8BD2FCEA1D706891002A3CEC /* SouvenifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2FCE91D706891002A3CEC /* SouvenifyUITests.swift */; };
+		8BF650581D797CD50037C9B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF650571D797CD50037C9B9 /* User.swift */; };
+		8BF6FF521D814980002FD8C1 /* PopoverViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6FF511D814980002FD8C1 /* PopoverViewViewController.swift */; };
+		8BFB56E81D7411C9004FF215 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB56E71D7411C9004FF215 /* MapViewController.swift */; };
+		8BFB56EC1D743EC4004FF215 /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB56EB1D743EC4004FF215 /* GCDBlackBox.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8BD2FCDB1D706891002A3CEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BD2FCBE1D706891002A3CEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BD2FCC51D706891002A3CEC;
+			remoteInfo = Souvenify;
+		};
+		8BD2FCE61D706891002A3CEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BD2FCBE1D706891002A3CEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BD2FCC51D706891002A3CEC;
+			remoteInfo = Souvenify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		479ADEF4AE410A3634DF66B5 /* Pods_Souvenify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Souvenify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E8E22025E384A5BF802DB6C /* Pods-Souvenify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Souvenify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Souvenify/Pods-Souvenify.release.xcconfig"; sourceTree = "<group>"; };
+		8B05923C1D76AE6F006CD582 /* SideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
+		8B05923E1D76C0B0006CD582 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		8B4E41741D75623D005A802C /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		8B83A6911D73499D0067B7E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8BD2FCC61D706891002A3CEC /* Souvenify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Souvenify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BD2FCC91D706891002A3CEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8BD2FCCB1D706891002A3CEC /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		8BD2FCCE1D706891002A3CEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8BD2FCD01D706891002A3CEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8BD2FCD31D706891002A3CEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8BD2FCD51D706891002A3CEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Souvenify/Info.plist; sourceTree = "<group>"; };
+		8BD2FCDA1D706891002A3CEC /* SouvenifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SouvenifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BD2FCDE1D706891002A3CEC /* SouvenifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouvenifyTests.swift; sourceTree = "<group>"; };
+		8BD2FCE01D706891002A3CEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BD2FCE51D706891002A3CEC /* SouvenifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SouvenifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BD2FCE91D706891002A3CEC /* SouvenifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouvenifyUITests.swift; sourceTree = "<group>"; };
+		8BD2FCEB1D706891002A3CEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BF650571D797CD50037C9B9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8BF6FF511D814980002FD8C1 /* PopoverViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewViewController.swift; sourceTree = "<group>"; };
+		8BF9C9301D78506B007D9E2B /* Souvenify-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Souvenify-Bridging-Header.h"; path = "Souvenify/Souvenify-Bridging-Header.h"; sourceTree = "<group>"; };
+		8BFB56E71D7411C9004FF215 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		8BFB56EB1D743EC4004FF215 /* GCDBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GCDBlackBox.swift; path = Souvenify/GCDBlackBox.swift; sourceTree = "<group>"; };
+		D6D5CA33842041EB511F5C2C /* Pods-Souvenify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Souvenify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Souvenify/Pods-Souvenify.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8BD2FCC31D706891002A3CEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B191ADACE39073D3C1FD6D6 /* Pods_Souvenify.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD2FCD71D706891002A3CEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD2FCE21D706891002A3CEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5873E135F36225F0CF5A3184 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6D5CA33842041EB511F5C2C /* Pods-Souvenify.debug.xcconfig */,
+				4E8E22025E384A5BF802DB6C /* Pods-Souvenify.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8BD2FCBD1D706891002A3CEC = {
+			isa = PBXGroup;
+			children = (
+				8BD2FCC81D706891002A3CEC /* Souvenify */,
+				8BD2FCDD1D706891002A3CEC /* SouvenifyTests */,
+				8BD2FCE81D706891002A3CEC /* SouvenifyUITests */,
+				8BD2FCC71D706891002A3CEC /* Products */,
+				5873E135F36225F0CF5A3184 /* Pods */,
+				A61C5571ED41C9C6FD55CD79 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8BD2FCC71D706891002A3CEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BD2FCC61D706891002A3CEC /* Souvenify.app */,
+				8BD2FCDA1D706891002A3CEC /* SouvenifyTests.xctest */,
+				8BD2FCE51D706891002A3CEC /* SouvenifyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8BD2FCC81D706891002A3CEC /* Souvenify */ = {
+			isa = PBXGroup;
+			children = (
+				8BF650591D79825C0037C9B9 /* Data Model */,
+				8BD2FCC91D706891002A3CEC /* AppDelegate.swift */,
+				8BF650541D7950940037C9B9 /* SideBar */,
+				8BF650531D79506C0037C9B9 /* Login */,
+				8B4E41741D75623D005A802C /* SearchResultViewController.swift */,
+				8BFB56E71D7411C9004FF215 /* MapViewController.swift */,
+				8BF6FF511D814980002FD8C1 /* PopoverViewViewController.swift */,
+				8BD2FCCD1D706891002A3CEC /* Main.storyboard */,
+				8BD2FCD01D706891002A3CEC /* Assets.xcassets */,
+				8BD2FCD21D706891002A3CEC /* LaunchScreen.storyboard */,
+				8BF650521D7950340037C9B9 /* Supporting Files */,
+			);
+			path = Souvenify;
+			sourceTree = "<group>";
+		};
+		8BD2FCDD1D706891002A3CEC /* SouvenifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				8BD2FCDE1D706891002A3CEC /* SouvenifyTests.swift */,
+				8BD2FCE01D706891002A3CEC /* Info.plist */,
+			);
+			path = SouvenifyTests;
+			sourceTree = "<group>";
+		};
+		8BD2FCE81D706891002A3CEC /* SouvenifyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8BD2FCE91D706891002A3CEC /* SouvenifyUITests.swift */,
+				8BD2FCEB1D706891002A3CEC /* Info.plist */,
+			);
+			path = SouvenifyUITests;
+			sourceTree = "<group>";
+		};
+		8BF650521D7950340037C9B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BF9C9301D78506B007D9E2B /* Souvenify-Bridging-Header.h */,
+				8BFB56EB1D743EC4004FF215 /* GCDBlackBox.swift */,
+				8BD2FCD51D706891002A3CEC /* Info.plist */,
+				8B83A6911D73499D0067B7E2 /* GoogleService-Info.plist */,
+			);
+			name = "Supporting Files";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8BF650531D79506C0037C9B9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8BD2FCCB1D706891002A3CEC /* LoginScreenViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		8BF650541D7950940037C9B9 /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				8B05923C1D76AE6F006CD582 /* SideBarViewController.swift */,
+				8B05923E1D76C0B0006CD582 /* SideBar.swift */,
+			);
+			name = SideBar;
+			sourceTree = "<group>";
+		};
+		8BF650591D79825C0037C9B9 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				8BF650571D797CD50037C9B9 /* User.swift */,
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
+		A61C5571ED41C9C6FD55CD79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				479ADEF4AE410A3634DF66B5 /* Pods_Souvenify.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8BD2FCC51D706891002A3CEC /* Souvenify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BD2FCEE1D706891002A3CEC /* Build configuration list for PBXNativeTarget "Souvenify" */;
+			buildPhases = (
+				7286785FE18A57D11582F19B /* [CP] Check Pods Manifest.lock */,
+				8BD2FCC21D706891002A3CEC /* Sources */,
+				8BD2FCC31D706891002A3CEC /* Frameworks */,
+				8BD2FCC41D706891002A3CEC /* Resources */,
+				DC377F0B95204CE33A8A2D66 /* [CP] Embed Pods Frameworks */,
+				9E808A8A03F7A08680DA700E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Souvenify;
+			productName = Souvenify;
+			productReference = 8BD2FCC61D706891002A3CEC /* Souvenify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8BD2FCD91D706891002A3CEC /* SouvenifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BD2FCF11D706891002A3CEC /* Build configuration list for PBXNativeTarget "SouvenifyTests" */;
+			buildPhases = (
+				8BD2FCD61D706891002A3CEC /* Sources */,
+				8BD2FCD71D706891002A3CEC /* Frameworks */,
+				8BD2FCD81D706891002A3CEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BD2FCDC1D706891002A3CEC /* PBXTargetDependency */,
+			);
+			name = SouvenifyTests;
+			productName = SouvenifyTests;
+			productReference = 8BD2FCDA1D706891002A3CEC /* SouvenifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8BD2FCE41D706891002A3CEC /* SouvenifyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BD2FCF41D706891002A3CEC /* Build configuration list for PBXNativeTarget "SouvenifyUITests" */;
+			buildPhases = (
+				8BD2FCE11D706891002A3CEC /* Sources */,
+				8BD2FCE21D706891002A3CEC /* Frameworks */,
+				8BD2FCE31D706891002A3CEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BD2FCE71D706891002A3CEC /* PBXTargetDependency */,
+			);
+			name = SouvenifyUITests;
+			productName = SouvenifyUITests;
+			productReference = 8BD2FCE51D706891002A3CEC /* SouvenifyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8BD2FCBE1D706891002A3CEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Dhiraj Das";
+				TargetAttributes = {
+					8BD2FCC51D706891002A3CEC = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = MUGWXPQ7U6;
+					};
+					8BD2FCD91D706891002A3CEC = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 8BD2FCC51D706891002A3CEC;
+					};
+					8BD2FCE41D706891002A3CEC = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 8BD2FCC51D706891002A3CEC;
+					};
+				};
+			};
+			buildConfigurationList = 8BD2FCC11D706891002A3CEC /* Build configuration list for PBXProject "Souvenify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8BD2FCBD1D706891002A3CEC;
+			productRefGroup = 8BD2FCC71D706891002A3CEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BD2FCC51D706891002A3CEC /* Souvenify */,
+				8BD2FCD91D706891002A3CEC /* SouvenifyTests */,
+				8BD2FCE41D706891002A3CEC /* SouvenifyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8BD2FCC41D706891002A3CEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD2FCD41D706891002A3CEC /* LaunchScreen.storyboard in Resources */,
+				8B83A6921D73499D0067B7E2 /* GoogleService-Info.plist in Resources */,
+				8BD2FCD11D706891002A3CEC /* Assets.xcassets in Resources */,
+				8BD2FCCF1D706891002A3CEC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD2FCD81D706891002A3CEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD2FCE31D706891002A3CEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7286785FE18A57D11582F19B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9E808A8A03F7A08680DA700E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Souvenify/Pods-Souvenify-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC377F0B95204CE33A8A2D66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Souvenify/Pods-Souvenify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8BD2FCC21D706891002A3CEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BFB56EC1D743EC4004FF215 /* GCDBlackBox.swift in Sources */,
+				8B05923D1D76AE6F006CD582 /* SideBarViewController.swift in Sources */,
+				8B05923F1D76C0B0006CD582 /* SideBar.swift in Sources */,
+				8BD2FCCC1D706891002A3CEC /* LoginScreenViewController.swift in Sources */,
+				8BF650581D797CD50037C9B9 /* User.swift in Sources */,
+				8BF6FF521D814980002FD8C1 /* PopoverViewViewController.swift in Sources */,
+				8B4E41751D75623D005A802C /* SearchResultViewController.swift in Sources */,
+				8BFB56E81D7411C9004FF215 /* MapViewController.swift in Sources */,
+				8BD2FCCA1D706891002A3CEC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD2FCD61D706891002A3CEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD2FCDF1D706891002A3CEC /* SouvenifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD2FCE11D706891002A3CEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD2FCEA1D706891002A3CEC /* SouvenifyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8BD2FCDC1D706891002A3CEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8BD2FCC51D706891002A3CEC /* Souvenify */;
+			targetProxy = 8BD2FCDB1D706891002A3CEC /* PBXContainerItemProxy */;
+		};
+		8BD2FCE71D706891002A3CEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8BD2FCC51D706891002A3CEC /* Souvenify */;
+			targetProxy = 8BD2FCE61D706891002A3CEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8BD2FCCD1D706891002A3CEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BD2FCCE1D706891002A3CEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8BD2FCD21D706891002A3CEC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BD2FCD31D706891002A3CEC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8BD2FCEC1D706891002A3CEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8BD2FCED1D706891002A3CEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8BD2FCEF1D706891002A3CEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6D5CA33842041EB511F5C2C /* Pods-Souvenify.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Souvenify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dhirajdas.Souvenify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8BD2FCF01D706891002A3CEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E8E22025E384A5BF802DB6C /* Pods-Souvenify.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Souvenify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dhirajdas.Souvenify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8BD2FCF21D706891002A3CEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SouvenifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dhirajdas.SouvenifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Souvenify.app/Souvenify";
+			};
+			name = Debug;
+		};
+		8BD2FCF31D706891002A3CEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SouvenifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dhirajdas.SouvenifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Souvenify.app/Souvenify";
+			};
+			name = Release;
+		};
+		8BD2FCF51D706891002A3CEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SouvenifyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dhirajdas.SouvenifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Souvenify;
+			};
+			name = Debug;
+		};
+		8BD2FCF61D706891002A3CEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SouvenifyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dhirajdas.SouvenifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Souvenify;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8BD2FCC11D706891002A3CEC /* Build configuration list for PBXProject "Souvenify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BD2FCEC1D706891002A3CEC /* Debug */,
+				8BD2FCED1D706891002A3CEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BD2FCEE1D706891002A3CEC /* Build configuration list for PBXNativeTarget "Souvenify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BD2FCEF1D706891002A3CEC /* Debug */,
+				8BD2FCF01D706891002A3CEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BD2FCF11D706891002A3CEC /* Build configuration list for PBXNativeTarget "SouvenifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BD2FCF21D706891002A3CEC /* Debug */,
+				8BD2FCF31D706891002A3CEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BD2FCF41D706891002A3CEC /* Build configuration list for PBXNativeTarget "SouvenifyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BD2FCF51D706891002A3CEC /* Debug */,
+				8BD2FCF61D706891002A3CEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8BD2FCBE1D706891002A3CEC /* Project object */;
+}
