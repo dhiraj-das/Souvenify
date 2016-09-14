@@ -58,6 +58,8 @@ class MapViewController: UIViewController, SideBarDelegate, UIPopoverPresentatio
         self.navigationItem.rightBarButtonItem = searchButton
         self.navigationItem.leftBarButtonItem = drawerButton
         
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        
         populateUserMarkers()
     }
     

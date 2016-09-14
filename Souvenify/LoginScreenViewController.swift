@@ -24,11 +24,11 @@ class LoginScreenViewController: UIViewController, GIDSignInUIDelegate, GIDSignI
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().signInSilently()
-        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewWillAppear(animated: Bool) {
         LoginButton.enabled = true
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     override func didReceiveMemoryWarning() {

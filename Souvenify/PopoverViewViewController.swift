@@ -118,9 +118,9 @@ class PopoverViewViewController: UIViewController, ImagePickerDelegate{
             let storageRef = FIRStorage.storage().reference().child((FIRAuth.auth()?.currentUser?.email)!).child("\(imageName).jpg")
             let uploadData = UIImageJPEGRepresentation(image, 0.1) // UIImagePNGRepresentation(image)
             
-            let locationData = FIRStorageMetadata()
-            locationData.customMetadata = ["latitude" : "\(currentMarker.position.latitude)" , "longitude" : "\(currentMarker.position.longitude)"]
-            let task = storageRef.putData(uploadData!, metadata: locationData)
+            //let locationData = FIRStorageMetadata()
+            //locationData.customMetadata = ["latitude" : "\(currentMarker.position.latitude)" , "longitude" : "\(currentMarker.position.longitude)"]
+            let task = storageRef.putData(uploadData!, metadata: nil)
             task.observeStatus(.Success) { snapshot in
                 self.addPhotos.enabled = true
                 self.gallery.enabled = true
