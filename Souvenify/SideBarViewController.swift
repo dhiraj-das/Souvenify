@@ -65,6 +65,8 @@ class SideBarTableViewController: UITableViewController {
             profileIconView.translatesAutoresizingMaskIntoConstraints = false
             let profileImage = UIImage(data: NSData(contentsOfURL: (firAuthUser?.currentUser?.photoURL)!)!)
             profileIconView.image = profileImage
+            profileIconView.layer.cornerRadius = 25
+            profileIconView.layer.masksToBounds = true
             cell?.contentView.addSubview(profileIconView)
             cell?.contentView.addConstraint(NSLayoutConstraint(item: cell!.contentView, attribute: .CenterX, relatedBy: .Equal, toItem: profileIconView, attribute: .CenterX, multiplier: 1.0, constant: 0.0))
             cell?.contentView.addConstraint(NSLayoutConstraint(item: cell!.contentView, attribute: .CenterY, relatedBy: .Equal, toItem: profileIconView, attribute: .CenterY, multiplier: 1.0, constant: 0.0))
@@ -76,7 +78,7 @@ class SideBarTableViewController: UITableViewController {
             profileNameLabel.font = UIFont(name: "HelveticaNeue", size: 11)
             profileNameLabel.translatesAutoresizingMaskIntoConstraints = false
             cell?.contentView.addSubview(profileNameLabel)
-            cell?.contentView.addConstraint(NSLayoutConstraint(item: profileIconView, attribute: NSLayoutAttribute.Bottom, relatedBy: .Equal, toItem: profileNameLabel, attribute: .Top, multiplier: 1.0, constant: 5.0))
+            cell?.contentView.addConstraint(NSLayoutConstraint(item: profileIconView, attribute: NSLayoutAttribute.Bottom, relatedBy: .Equal, toItem: profileNameLabel, attribute: .Top, multiplier: 1.0, constant: -5.0))
             cell?.contentView.addConstraint(NSLayoutConstraint(item: profileIconView, attribute: .CenterX, relatedBy: .Equal, toItem: profileNameLabel, attribute: .CenterX, multiplier: 1.0, constant: 0.0))
             
             let selectedView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: cell!.frame.size.width, height: cell!.frame.size.height))
