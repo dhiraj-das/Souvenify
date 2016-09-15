@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import GoogleMaps
 
-struct User {
-    var name : String
-    var email : String
+struct Annotation {
+    let location: CLLocationCoordinate2D
+    let key: String
+    let marker: GMSMarker
 }

@@ -15,43 +15,20 @@ import GoogleMaps
 class PopoverViewViewController: UIViewController, ImagePickerDelegate{
 
     var currentMarker : GMSMarker!
-    
+    var tappedAnnotation: Annotation?
     @IBOutlet weak var gallery: UIButton!
     @IBOutlet weak var addPhotos: UIButton!
     
     
     @IBAction func galleryPressed(sender: AnyObject) {
-        print("gallery pressed")
         
-        var keys : [String] = [String]()
         var imagesURL = [String]()
-        let databaseReference = FIRDatabase.database().referenceFromURL("https://souvenify.firebaseio.com/").child("users").child((FIRAuth.auth()?.currentUser?.uid)!).child("locations")
+        let databaseReference = FIRDatabase.database().referenceFromURL("https://souvenify.firebaseio.com/").child("users").child((FIRAuth.auth()?.currentUser?.uid)!).child("locations").child((tappedAnnotation?.key)!).child("photos")
+        
         databaseReference.observeSingleEventOfType(.Value, withBlock: { (snapshots) in
-            
-            for snapshot in snapshots.children {
-                if let lat = snapshot.value["latitude"] as? Double {
-                    if let lon = snapshot.value["longitude"] as? Double {
-                        if self.currentMarker.position.latitude == lat && self.currentMarker.position.longitude == lon {
-                            for child in snapshot.children {
-                                keys.append(((child.key!)!))
-                            }
-                        }
-                    }
-                }
-            }
-            keys.removeLast()
-            keys.removeLast()
-            
-            for snapshot in snapshots.children {
-                if let lat = snapshot.value["latitude"] as? Double {
-                    if let lon = snapshot.value["longitude"] as? Double {
-                        if self.currentMarker.position.latitude == lat && self.currentMarker.position.longitude == lon {
-                            for (_, val) in keys.enumerate() {
-                                let temp = (snapshot.value[val]!)! as! String
-                                imagesURL.append(temp)
-                            }
-                        }
-                    }
+            if let dict = (snapshots.value) as? [String : AnyObject] {
+                for (_, value) in dict {
+                    imagesURL.append(value as! String)
                 }
             }
             self.showPhotos(imagesURL)
@@ -59,7 +36,6 @@ class PopoverViewViewController: UIViewController, ImagePickerDelegate{
     }
     
     @IBAction func addPhotosPressed(sender: AnyObject) {
-        print("add photos pressed")
         
         let imagePickerController = ImagePickerController()
         imagePickerController.delegate = self
@@ -116,25 +92,20 @@ class PopoverViewViewController: UIViewController, ImagePickerDelegate{
         for image in images {
             let imageName = NSUUID().UUIDString
             let storageRef = FIRStorage.storage().reference().child((FIRAuth.auth()?.currentUser?.email)!).child("\(imageName).jpg")
-            let uploadData = UIImageJPEGRepresentation(image, 0.1) // UIImagePNGRepresentation(image)
+            let uploadData = UIImageJPEGRepresentation(image, 0.1)
             
-            //let locationData = FIRStorageMetadata()
-            //locationData.customMetadata = ["latitude" : "\(currentMarker.position.latitude)" , "longitude" : "\(currentMarker.position.longitude)"]
             let task = storageRef.putData(uploadData!, metadata: nil)
             task.observeStatus(.Success) { snapshot in
                 self.addPhotos.enabled = true
                 self.gallery.enabled = true
                 let downloadURL = (snapshot.metadata?.downloadURL()?.absoluteString)!
-                print(downloadURL)
+                print("Download URL: \(downloadURL)")
                 databaseReference.observeSingleEventOfType(.Value, withBlock: { (snapshots) in
-                    
                     for snapshot in snapshots.children {
-                        if let lat = snapshot.value["latitude"] as? Double {
-                            if let lon = snapshot.value["longitude"] as? Double {
-                                if self.currentMarker.position.latitude == lat && self.currentMarker.position.longitude == lon {
-                                    databaseReference.child(snapshot.key).childByAutoId().setValue(downloadURL)
-                                }
-                            }
+                        let snapKey = String(snapshot.key)
+                        if self.tappedAnnotation?.key ==  snapKey{
+                            databaseReference.child(snapshot.key).child("photos").childByAutoId().setValue(downloadURL)
+                            break
                         }
                     }
                 })
@@ -142,6 +113,5 @@ class PopoverViewViewController: UIViewController, ImagePickerDelegate{
         }
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
     }
-
     
 }

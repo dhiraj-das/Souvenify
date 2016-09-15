@@ -19,7 +19,7 @@
 		8BD2FCD41D706891002A3CEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD2FCD21D706891002A3CEC /* LaunchScreen.storyboard */; };
 		8BD2FCDF1D706891002A3CEC /* SouvenifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2FCDE1D706891002A3CEC /* SouvenifyTests.swift */; };
 		8BD2FCEA1D706891002A3CEC /* SouvenifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2FCE91D706891002A3CEC /* SouvenifyUITests.swift */; };
-		8BF650581D797CD50037C9B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF650571D797CD50037C9B9 /* User.swift */; };
+		8BF650581D797CD50037C9B9 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF650571D797CD50037C9B9 /* Marker.swift */; };
 		8BF6FF521D814980002FD8C1 /* PopoverViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6FF511D814980002FD8C1 /* PopoverViewViewController.swift */; };
 		8BFB56E81D7411C9004FF215 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB56E71D7411C9004FF215 /* MapViewController.swift */; };
 		8BFB56EC1D743EC4004FF215 /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB56EB1D743EC4004FF215 /* GCDBlackBox.swift */; };
@@ -62,7 +62,7 @@
 		8BD2FCE51D706891002A3CEC /* SouvenifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SouvenifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD2FCE91D706891002A3CEC /* SouvenifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouvenifyUITests.swift; sourceTree = "<group>"; };
 		8BD2FCEB1D706891002A3CEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BF650571D797CD50037C9B9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8BF650571D797CD50037C9B9 /* Marker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		8BF6FF511D814980002FD8C1 /* PopoverViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewViewController.swift; sourceTree = "<group>"; };
 		8BF9C9301D78506B007D9E2B /* Souvenify-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Souvenify-Bridging-Header.h"; path = "Souvenify/Souvenify-Bridging-Header.h"; sourceTree = "<group>"; };
 		8BFB56E71D7411C9004FF215 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 		8BF650591D79825C0037C9B9 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				8BF650571D797CD50037C9B9 /* User.swift */,
+				8BF650571D797CD50037C9B9 /* Marker.swift */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -396,7 +396,7 @@
 				8B05923D1D76AE6F006CD582 /* SideBarViewController.swift in Sources */,
 				8B05923F1D76C0B0006CD582 /* SideBar.swift in Sources */,
 				8BD2FCCC1D706891002A3CEC /* LoginScreenViewController.swift in Sources */,
-				8BF650581D797CD50037C9B9 /* User.swift in Sources */,
+				8BF650581D797CD50037C9B9 /* Marker.swift in Sources */,
 				8BF6FF521D814980002FD8C1 /* PopoverViewViewController.swift in Sources */,
 				8B4E41751D75623D005A802C /* SearchResultViewController.swift in Sources */,
 				8BFB56E81D7411C9004FF215 /* MapViewController.swift in Sources */,

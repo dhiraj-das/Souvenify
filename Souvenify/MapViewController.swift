@@ -28,8 +28,9 @@ class MapViewController: UIViewController, SideBarDelegate, UIPopoverPresentatio
     var resultMarker : GMSMarker!
     var sideBar = SideBar()
     var currentMarker : GMSMarker!
+    var tappedAnnotation: Annotation?
     var infoTap : UITapGestureRecognizer!
-    
+    var annotations: [Annotation] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         searchResultController = SearchResultViewController()
@@ -73,11 +74,14 @@ class MapViewController: UIViewController, SideBarDelegate, UIPopoverPresentatio
         databaseReference.observeSingleEventOfType(.Value, withBlock: { (snapshots) in
             
             for snapshot in snapshots.children {
+                let key = String(snapshot.key)
                 if let lat = snapshot.value["latitude"] as? Double {
                     if let lon = snapshot.value["longitude"] as? Double {
                         let coordinate = CLLocationCoordinate2DMake(lat, lon)
                         let marker = GMSMarker(position: coordinate)
                         marker.map = self.mapView
+                        let annotation = Annotation(location: coordinate, key: key, marker: marker)
+                        self.annotations.append(annotation)
                     }
                 }
             }
@@ -159,24 +163,19 @@ extension MapViewController : GMSMapViewDelegate {
     func mapView(mapView: GMSMapView, didTapMarker marker: GMSMarker) -> Bool {
         
         currentMarker = marker
+        tappedAnnotation = annotations.filter() { $0.marker == marker}.first
         
         let contentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("popover") as? PopoverViewViewController
         contentViewController!.modalPresentationStyle = .Popover
         contentViewController?.preferredContentSize = CGSizeMake(180, 60)
         performUIUpdatesOnMain({ contentViewController?.gallery.enabled = false })
         contentViewController?.currentMarker = currentMarker
-        
-        let databaseReference = FIRDatabase.database().referenceFromURL("https://souvenify.firebaseio.com/").child("users").child((FIRAuth.auth()?.currentUser?.uid)!).child("locations")
+        contentViewController?.tappedAnnotation = tappedAnnotation
+        let databaseReference = FIRDatabase.database().referenceFromURL("https://souvenify.firebaseio.com/").child("users").child((FIRAuth.auth()?.currentUser?.uid)!).child("locations").child((tappedAnnotation?.key)!)
         databaseReference.observeSingleEventOfType(.Value, withBlock: { (snapshots) in
             for snapshot in snapshots.children {
-                if let lat = snapshot.value["latitude"] as? Double {
-                    if let lon = snapshot.value["longitude"] as? Double {
-                        if self.currentMarker.position.latitude == lat && self.currentMarker.position.longitude == lon {
-                            if snapshot.childrenCount > 2 {
-                                contentViewController?.gallery.enabled = true
-                            }
-                        }
-                    }
+                if snapshot.childrenCount > 0 {
+                    contentViewController?.gallery.enabled = true
                 }
             }
         })
@@ -208,19 +207,9 @@ extension MapViewController : GMSMapViewDelegate {
                 print(err?.localizedDescription)
                 return
             }
+            let addedAnnotation = Annotation(location: coordinate, key: ref.key, marker: marker)
+            self.annotations.append(addedAnnotation)
         })
     }
 
 }
-
-//    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-//        if !didFindLocation{
-//            if let location = change?[NSKeyValueChangeNewKey] as? CLLocation {
-//                print(location.coordinate)
-//                mapView.camera = GMSCameraPosition.cameraWithTarget(location.coordinate, zoom: 14)
-//                didFindLocation = true
-//            }
-//        }
-//    }
-    
-
